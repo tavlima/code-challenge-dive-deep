@@ -1,4 +1,4 @@
-package com.github.tavlima;
+package com.github.tavlima.deepdive;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
