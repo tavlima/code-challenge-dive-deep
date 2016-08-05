@@ -7,12 +7,13 @@ Feature: Result output
     When it receives the commands <commands>
     Then the result '<result>' should be printed to the console
     Examples:
-      | commands         | result       |
-      | LMRDDMMUU        | -1 2 0 NORTE |
-      | LMRDDMMUUU       | -1 2 0 NORTE |
-      | LMRDDMMRU        | -1 2 1 LESTE |
-      | DDMMRMMRMMRMMRUU | 0 0 0 NORTE  |
-      | DDDDMMMRMMRMRMU  | 1 2 3 OESTE  |
+      | commands         | result        |
+      | LMRDDMMUU        | -1 2 0 NORTE  |
+      | RMMLMMMDDLL      | 2 3 -2 SUL    |
+      | LMRDDMMUUU       | -1 2 0 NORTE  |
+      | LMRDDMMRU        | -1 2 -1 LESTE |
+      | DDMMRMMRMMRMMRUU | 0 0 0 NORTE   |
+      | DDDDMMMRMMRMRMU  | 1 2 -3 OESTE  |
 
 
   Scenario Outline: Invalid commands
