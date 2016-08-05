@@ -15,7 +15,7 @@ public class SubmergeCommand implements NavigationCommand {
 
     @Override
     public void execute(Submarine submarine) {
-        submarine.setZ(submarine.getZ() + 1);
+        submarine.setZ(submarine.getZ() - 1);
     }
 
 }

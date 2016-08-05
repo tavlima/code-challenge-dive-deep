@@ -52,10 +52,10 @@ Feature: Navigation
     Then it should move to position <x0> <y0> <z1> <dir0>
     Examples:
       | x0 | y0 | z0 | dir0  | z1 |
-      | 0  | 0  | 0  | NORTE | 0  |
-      | 0  | 0  | 1  | SUL   | 0  |
-      | 0  | 0  | 2  | LESTE | 1  |
-      | 0  | 0  | 3  | OESTE | 2  |
+      | 0  | 0  | -3 | NORTE | -2 |
+      | 0  | 0  | -2 | SUL   | -1 |
+      | 0  | 0  | -1 | LESTE | 0  |
+      | 0  | 0  | 0  | OESTE | 0  |
 
 
   Scenario Outline: Submerge
@@ -64,7 +64,7 @@ Feature: Navigation
     Then it should move to position <x0> <y0> <z1> <dir0>
     Examples:
       | x0 | y0 | z0 | dir0  | z1 |
-      | 0  | 0  | 0  | NORTE | 1  |
-      | 0  | 0  | 1  | SUL   | 2  |
-      | 0  | 0  | 2  | LESTE | 3  |
-      | 0  | 0  | 3  | OESTE | 4  |
+      | 0  | 0  | -3 | NORTE | -4 |
+      | 0  | 0  | -2 | SUL   | -3 |
+      | 0  | 0  | -1 | LESTE | -2 |
+      | 0  | 0  | 0  | OESTE | -1 |

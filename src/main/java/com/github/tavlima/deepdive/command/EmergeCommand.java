@@ -15,8 +15,8 @@ public class EmergeCommand implements NavigationCommand {
 
     @Override
     public void execute(Submarine submarine) {
-        if (submarine.getZ() > 0) {
-            submarine.setZ(submarine.getZ() - 1);
+        if (submarine.getZ() < 0) {
+            submarine.setZ(submarine.getZ() + 1);
         }
     }
 
