@@ -1,7 +1,7 @@
 package com.github.tavlima.deepdive.test.step;
 
 import com.github.tavlima.deepdive.BuscapeDeepDiveApplication;
-import com.github.tavlima.deepdive.domain.Command;
+import com.github.tavlima.deepdive.domain.CommandCode;
 import com.github.tavlima.deepdive.domain.Direction;
 import com.github.tavlima.deepdive.domain.Submarine;
 import cucumber.api.java.en.Given;
@@ -35,27 +35,27 @@ public class NavigateSteps {
 
     @When("^it receives the rotate left command$")
     public void itReceivesTheRotateLeftCommand() throws Throwable {
-        executeCommand(Command.ROTATE_LEFT);
+        executeCommand(CommandCode.ROTATE_LEFT);
     }
 
     @When("^it receives the rotate right command$")
     public void itReceivesTheRotateRightCommand() throws Throwable {
-        executeCommand(Command.ROTATE_RIGHT);
+        executeCommand(CommandCode.ROTATE_RIGHT);
     }
 
     @When("^it receives the move command$")
     public void itReceivesTheMoveCommand() throws Throwable {
-        executeCommand(Command.MOVE);
+        executeCommand(CommandCode.MOVE);
     }
 
     @When("^it receives the emerge command$")
     public void itReceivesTheEmergeCommand() throws Throwable {
-        executeCommand(Command.EMERGE);
+        executeCommand(CommandCode.EMERGE);
     }
 
     @When("^it receives the submerge command$")
     public void itReceivesTheSubmergeCommand() throws Throwable {
-        executeCommand(Command.SUBMERGE);
+        executeCommand(CommandCode.SUBMERGE);
     }
 
     @Then("^it should move to position ([^ ]+) ([^ ]+) ([^ ]+) ([^ ]+)$")
@@ -73,7 +73,7 @@ public class NavigateSteps {
                 .isEqualTo(direction);
     }
 
-    private void executeCommand(Command command) throws Exception {
-        application.run(command.getCode());
+    private void executeCommand(CommandCode commandCode) throws Exception {
+        application.run(commandCode.getCode());
     }
 }
